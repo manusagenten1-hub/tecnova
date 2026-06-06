@@ -1,0 +1,143 @@
+import React from 'react';
+import { Briefcase, Stethoscope, Users, HardHat, Truck, Factory, Wrench, TrendingUp, ArrowRight } from 'lucide-react';
+import { AudienceItem } from '../types';
+import { motion } from 'motion/react';
+
+const audiences: AudienceItem[] = [
+  { label: 'Empresas B2B', icon: Briefcase },
+  { label: 'Clínicas e Consultórios', icon: Stethoscope },
+  { label: 'Escritórios Profissionais', icon: Users },
+  { label: 'Construção Civil', icon: HardHat },
+  { label: 'Logística e Transportes', icon: Truck },
+  { label: 'Indústrias', icon: Factory },
+  { label: 'Empresas de Serviços', icon: Wrench },
+  { label: 'Negócios em Expansão', icon: TrendingUp },
+];
+
+const TargetAudience: React.FC = () => {
+  return (
+    <section id="audience" className="py-16 md:py-24 bg-white relative overflow-hidden">
+      <div className="container mx-auto px-4 md:px-6 relative z-10">
+        <motion.div 
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: "-100px" }}
+          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          className="text-center max-w-4xl mx-auto mb-10 md:mb-16"
+        >
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark mb-6 md:mb-8">
+            Ideal para negócios que querem crescer no digital
+          </h2>
+          <p className="text-gray-900 font-bold text-lg md:text-2xl leading-relaxed mb-8 md:mb-10">
+            Trabalhamos com empresas que entendem a importância de uma presença digital forte para gerar oportunidades, fortalecer sua marca e escalar resultados.
+          </p>
+          <div className="inline-block px-4 py-1.5 rounded-full bg-gray-100 border border-gray-300 shadow-sm">
+            <span className="text-gray-800 text-xs md:text-sm font-bold tracking-widest uppercase">
+              Alguns exemplos de segmentos atendidos:
+            </span>
+          </div>
+        </motion.div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 md:gap-6 mb-10 md:mb-12">
+          {audiences.map((item, index) => {
+            const Icon = item.icon;
+            const isB2B = item.label === 'Empresas B2B';
+            return (
+              <motion.div 
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: index * 0.05, ease: 'easeOut' }}
+                key={index}
+                className={isB2B 
+                  ? "group relative rounded-2xl overflow-hidden cursor-default transform hover:-translate-y-1 transition-transform duration-500 bg-[#2a2200]"
+                  : "group rounded-2xl overflow-hidden cursor-default transform hover:-translate-y-1 transition-transform duration-500 border border-red-500/20 bg-[#0a0a0a] hover:bg-[#111] hover:border-red-500/40"
+                }
+              >
+                {isB2B && (
+                  <>
+                    <div 
+                      className="absolute inset-[-100%] animate-spin bg-[conic-gradient(from_90deg,transparent_0_340deg,#ffd700_360deg)] opacity-90" 
+                      style={{ animationDuration: '4s' }}
+                    />
+                    <div className="absolute inset-[1px] bg-[#0a0a0a] group-hover:bg-[#111] rounded-2xl transition-colors duration-500" />
+                  </>
+                )}
+                
+                <div className="relative flex flex-col items-center justify-center p-3 w-full h-full text-center">
+                  <div className={`w-8 h-8 md:w-10 md:h-10 rounded-xl bg-white/5 flex items-center justify-center mb-2 md:mb-3 transition-colors duration-500 ${isB2B ? 'text-[#ffd700] shadow-[0_0_15px_rgba(255,215,0,0.15)] group-hover:text-yellow-300' : 'text-white group-hover:text-red-400'}`}>
+                    <Icon className="w-4 h-4 md:w-5 md:h-5" />
+                  </div>
+                  <h3 className="font-heading font-medium text-white/90 text-xs transition-colors duration-300">
+                    {item.label}
+                  </h3>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        <motion.div 
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+          className="text-center mb-8 max-w-3xl mx-auto"
+        >
+          <p className="text-gray-400 text-xs md:text-sm italic">
+            *Estes são apenas exemplos. A TecNova desenvolve estratégias para empresas que buscam autoridade, visibilidade e crescimento digital.
+          </p>
+        </motion.div>
+
+        {/* Final Phrase & CTA */}
+        <motion.div 
+          initial={{ opacity: 0, scale: 0.95 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          className="group bg-gradient-to-r from-brand-blue to-[#0a1a35] rounded-3xl p-6 md:p-12 text-center relative overflow-hidden border border-brand-accent/20 shadow-xl"
+        >
+           <div className="absolute inset-0 w-full h-full bg-brand-accent/5 opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+           <div className="absolute top-0 right-0 w-64 h-64 bg-brand-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4"></div>
+           
+           <div className="relative z-10 flex flex-col md:flex-row items-center justify-between gap-6 max-w-5xl mx-auto">
+              <div className="text-center md:text-left">
+                <p className="text-white text-base md:text-xl font-medium mb-1 relative overflow-hidden">
+                  <motion.span 
+                    initial={{ y: "100%" }} 
+                    whileInView={{ y: 0 }} 
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.2 }}
+                    className="block"
+                  >
+                    Independentemente do tamanho do seu negócio,
+                  </motion.span>
+                </p>
+                <p className="text-brand-accent font-heading font-bold text-lg md:text-2xl drop-shadow-[0_0_5px_rgba(0,212,255,0.5)] relative overflow-hidden">
+                  <motion.span 
+                    initial={{ y: "100%" }} 
+                    whileInView={{ y: 0 }} 
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.5, delay: 0.3 }}
+                    className="block"
+                  >
+                    sua presença digital precisa transmitir autoridade.
+                  </motion.span>
+                </p>
+              </div>
+              <button 
+                onClick={() => window.dispatchEvent(new CustomEvent('open-quiz-modal'))}
+                className="w-full md:w-auto overflow-hidden relative inline-flex justify-center items-center gap-2 bg-brand-accent text-brand-dark px-5 py-3 md:px-8 md:py-4 rounded-xl font-bold transition-all shadow-neon group/btn text-sm md:text-base"
+              >
+                <span className="absolute inset-0 w-full h-full bg-white origin-left scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-500 ease-[cubic-bezier(0.19,1,0.22,1)]"></span>
+                <span className="relative z-10 whitespace-normal text-center md:whitespace-nowrap">Vamos conversar</span>
+                <ArrowRight className="w-5 h-5 relative z-10 transition-transform duration-300 group-hover/btn:translate-x-1 shrink-0" />
+              </button>
+           </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+};
+
+export default TargetAudience;
