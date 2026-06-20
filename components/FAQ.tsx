@@ -86,7 +86,7 @@ const FAQ: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
-              className="bg-[#0a0a0a] border border-brand-accent/20 rounded-2xl overflow-hidden hover:border-brand-accent/50 transition-colors shadow-sm"
+              className="bg-[#0a0a0a] border border-brand-accent/20 rounded-2xl overflow-hidden transition-colors shadow-sm"
             >
               <button 
                 onClick={() => toggleFAQ(index)}
