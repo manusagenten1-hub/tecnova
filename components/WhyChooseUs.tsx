@@ -14,7 +14,7 @@ const benefits = [
 
 const WhyChooseUs: React.FC = () => {
   return (
-    <section id="why-us" className="py-16 md:py-24 bg-white overflow-hidden relative">
+    <section id="why-us" className="py-16 md:py-24 bg-brand-dark overflow-hidden relative border-t border-brand-accent/5">
       <div className="container mx-auto px-4 md:px-6 relative z-10 max-w-4xl">
         <div className="flex flex-col items-center">
           
@@ -27,7 +27,7 @@ const WhyChooseUs: React.FC = () => {
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
               className="text-center"
             >
-              <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-10 md:mb-14 leading-tight">
+              <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-10 md:mb-14 leading-tight">
                 Marketing pensado para gerar crescimento, não apenas <span className="text-brand-accent drop-shadow-[0_0_5px_rgba(230,0,0,0.5)]">presença</span>.
               </h2>
             </motion.div>
@@ -48,12 +48,12 @@ const WhyChooseUs: React.FC = () => {
                     visible: { opacity: 1, x: 0, transition: { type: "spring", stiffness: 100 } }
                   }}
                   key={index} 
-                  className="flex items-center gap-3 md:gap-4 p-4 md:p-5 rounded-xl bg-brand-gray/30 hover:bg-brand-gray/60 transition-colors border border-transparent hover:border-brand-accent/20 group cursor-default"
+                  className="flex items-center gap-3 md:gap-4 p-4 md:p-5 rounded-xl bg-white/5 hover:bg-white/10 transition-colors border border-transparent hover:border-brand-accent/20 group cursor-default"
                 >
                   <div className="flex-shrink-0">
                     <CheckCircle className="w-5 h-5 md:w-6 md:h-6 text-brand-accent group-hover:scale-110 transition-transform duration-300" />
                   </div>
-                  <p className="text-brand-dark font-medium text-base md:text-lg text-left">
+                  <p className="text-white font-medium text-base md:text-lg text-left">
                     {benefit}
                   </p>
                 </motion.div>
