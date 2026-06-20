@@ -32,7 +32,7 @@ const projects: PortfolioItem[] = [
 
 const Portfolio: React.FC = () => {
   return (
-    <section id="portfolio" className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section id="portfolio" className="py-16 md:py-24 bg-brand-dark relative overflow-hidden border-t border-brand-accent/5">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -41,10 +41,10 @@ const Portfolio: React.FC = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-4 md:mb-6">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4 md:mb-6">
             Projetos que fortalecem marcas e geram resultados
           </h2>
-          <p className="text-gray-600 text-base md:text-lg">
+          <p className="text-gray-400 text-base md:text-lg">
             Confira exemplos de estruturas digitais desenvolvidas para atrair atenção, gerar confiança e apoiar o crescimento de negócios.
           </p>
         </motion.div>
@@ -57,7 +57,7 @@ const Portfolio: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.7, delay: index * 0.15, ease: [0.16, 1, 0.3, 1] }}
-              className="flex flex-col bg-white rounded-3xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-2xl hover:border-brand-accent/30 transition-all duration-500 group transform hover:-translate-y-2 relative"
+              className="flex flex-col bg-[#0a0a0a] rounded-3xl overflow-hidden shadow-lg border border-brand-accent/20 hover:shadow-[0_0_20px_rgba(230,0,0,0.1)] hover:border-brand-accent/50 transition-all duration-500 group transform hover:-translate-y-2 relative"
             >
               <div className="absolute inset-0 bg-gradient-to-t from-brand-blue/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
               
@@ -75,17 +75,17 @@ const Portfolio: React.FC = () => {
               </div>
 
               {/* Content */}
-              <div className="p-6 md:p-8 flex flex-col flex-grow relative z-10 bg-white">
-                <h3 className="text-xl md:text-2xl font-heading font-bold text-brand-dark mb-2 md:mb-3 group-hover:text-brand-accent transition-colors duration-300">
+              <div className="p-6 md:p-8 flex flex-col flex-grow relative z-10 bg-[#0a0a0a]">
+                <h3 className="text-xl md:text-2xl font-heading font-bold text-white mb-2 md:mb-3 group-hover:text-brand-accent transition-colors duration-300">
                   {project.name}
                 </h3>
-                <p className="text-gray-600 text-sm mb-4 md:mb-6 leading-relaxed transition-colors duration-300">
+                <p className="text-gray-400 text-sm mb-4 md:mb-6 leading-relaxed transition-colors duration-300">
                   {project.description}
                 </p>
 
                 <div className="mb-6 md:mb-8 space-y-2">
                   {project.services.map((service, idx) => (
-                    <div key={idx} className="flex items-center gap-2 text-xs md:text-sm text-gray-500">
+                    <div key={idx} className="flex items-center gap-2 text-xs md:text-sm text-gray-400">
                       <Check className="w-3 h-3 md:w-4 md:h-4 text-brand-accent" />
                       <span>{service}</span>
                     </div>
