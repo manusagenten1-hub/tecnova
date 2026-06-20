@@ -53,16 +53,16 @@ const Features: React.FC = () => {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true, margin: "-50px" }}
                   transition={{ duration: 0.6, delay: index * 0.1, ease: [0.16, 1, 0.3, 1] }}
-                  className="bg-white p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-xl transition-all duration-500 border-l-4 border-transparent hover:border-brand-accent group transform hover:-translate-y-2 relative overflow-hidden"
+                  className="bg-[#0a0a0a] border border-brand-accent/10 p-6 md:p-8 rounded-2xl shadow-sm hover:shadow-[0_0_20px_rgba(230,0,0,0.1)] hover:border-brand-accent/50 transition-all duration-500 hover:-translate-y-2 relative overflow-hidden group"
                 >
                   <div className="absolute -right-10 -top-10 w-32 h-32 bg-brand-accent/5 rounded-full blur-2xl group-hover:scale-150 transition-transform duration-700 pointer-events-none"></div>
-                  <div className="w-10 h-10 md:w-12 md:h-12 bg-gray-100/10 rounded-lg flex items-center justify-center mb-4 md:mb-6 transition-colors duration-500">
-                    <Icon className="w-5 h-5 md:w-6 md:h-6 text-brand-dark transition-colors duration-500" />
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-accent/10 rounded-lg flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-all duration-500 relative z-10">
+                    <Icon className="w-5 h-5 md:w-6 md:h-6 text-brand-accent transition-colors duration-500" />
                   </div>
-                  <h3 className="text-lg md:text-xl font-heading font-bold text-brand-dark mb-2 md:mb-3 relative z-10">
+                  <h3 className="text-lg md:text-xl font-heading font-bold text-white mb-2 md:mb-3 relative z-10 group-hover:text-brand-accent transition-colors duration-300">
                     {feature.title}
                   </h3>
-                  <p className="text-gray-600 text-sm md:text-base leading-relaxed relative z-10 transition-colors duration-300">
+                  <p className="text-gray-400 text-sm md:text-base leading-relaxed relative z-10 group-hover:text-gray-300 transition-colors duration-300">
                     {feature.description}
                   </p>
                 </motion.div>
