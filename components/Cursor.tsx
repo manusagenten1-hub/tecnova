@@ -54,24 +54,14 @@ const Cursor: React.FC = () => {
   }, [cursorX, cursorY, isVisible]);
 
   useEffect(() => {
-    if (isDesktop) {
-      // Injeta CSS puramente via react para ocultar o ponteiro padrao e exibir apenas a bola invertida
-      const style = document.createElement('style');
-      style.innerHTML = `
-        body:not(.quiz-open) * { cursor: none !important; }
-      `;
-      document.head.appendChild(style);
-      return () => {
-        document.head.removeChild(style);
-      };
-    }
+    // We now keep the default cursor visible as per request.
   }, [isDesktop]);
 
   if (!isDesktop) return null;
 
   return (
     <motion.div
-      className="custom-cursor fixed top-0 left-0 w-6 h-6 rounded-full bg-white pointer-events-none z-[9999] mix-blend-difference flex items-center justify-center"
+      className="custom-cursor fixed top-0 left-0 w-6 h-6 rounded-full bg-brand-accent/50 pointer-events-none z-[9999] mix-blend-screen flex items-center justify-center border border-brand-accent"
       style={{
         x: cursorXSpring,
         y: cursorYSpring,
@@ -98,7 +88,7 @@ const AnimateDot = ({ isHovered }: { isHovered: boolean }) => {
         initial={{ opacity: 0, scale: 0 }}
         animate={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0 }}
-        className="w-1.5 h-1.5 bg-black rounded-full mix-blend-difference" 
+        className="w-1.5 h-1.5 bg-brand-accent rounded-full" 
     />
   )
 }
