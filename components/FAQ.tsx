@@ -92,10 +92,10 @@ const FAQ: React.FC = () => {
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-6 py-5 md:px-8 md:py-6 flex items-center justify-between text-left focus:outline-none group cursor-pointer"
               >
-                <h3 className="font-heading font-bold text-white text-base md:text-lg group-hover:text-brand-accent transition-colors pr-4">
+                <h3 className="font-heading font-bold text-white text-base md:text-lg transition-colors pr-4">
                   {faq.question}
                 </h3>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${openIndex === index ? 'bg-brand-accent text-white rotate-180' : 'bg-white/5 text-white group-hover:bg-brand-accent/10 group-hover:text-brand-accent'}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${openIndex === index ? 'bg-brand-accent text-white rotate-180' : 'bg-white/5 text-white'}`}>
                   <ChevronDown className="w-5 h-5" />
                 </div>
               </button>
