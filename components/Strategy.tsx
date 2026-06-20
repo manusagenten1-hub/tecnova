@@ -69,11 +69,11 @@ const Strategy: React.FC = () => {
                 className="bg-brand-dark/50 border border-brand-accent/10 p-6 md:p-8 rounded-2xl hover:border-brand-accent/50 hover:bg-brand-accent/5 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)] transition-all duration-500 group relative overflow-hidden"
               >
                 <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-accent/10 rounded-lg flex items-center justify-center mb-4 md:mb-6 group-hover:scale-110 transition-all duration-300 relative z-10">
+                <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-accent/10 rounded-lg flex items-center justify-center mb-4 md:mb-6 transition-all duration-300 relative z-10">
                   <Icon className="w-5 h-5 md:w-6 md:h-6 text-brand-accent" />
                 </div>
-                <h3 className="text-lg md:text-xl font-heading font-bold mb-2 md:mb-3 group-hover:text-brand-accent transition-colors duration-300 relative z-10">{item.title}</h3>
-                <p className="text-sm md:text-base text-gray-400 leading-relaxed group-hover:text-gray-300 transition-colors duration-300 relative z-10">
+                <h3 className="text-lg md:text-xl font-heading font-bold mb-2 md:mb-3 transition-colors duration-300 relative z-10">{item.title}</h3>
+                <p className="text-sm md:text-base text-gray-400 leading-relaxed transition-colors duration-300 relative z-10">
                   {item.description}
                 </p>
               </motion.div>
