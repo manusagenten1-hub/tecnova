@@ -63,7 +63,7 @@ const FAQ: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="py-16 pt-20 md:py-24 pb-48 md:pb-64 bg-brand-gray relative overflow-hidden">
+    <section id="faq" className="py-16 pt-20 md:py-24 pb-48 md:pb-64 bg-brand-dark relative overflow-hidden border-t border-brand-accent/5">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         
         <motion.div 
@@ -73,7 +73,7 @@ const FAQ: React.FC = () => {
           transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-3xl mx-auto mb-10 md:mb-16"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-bold text-brand-dark mb-4 md:mb-6">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-heading font-bold text-white mb-4 md:mb-6">
             Dúvidas? Veja algumas perguntas frequentes
           </h2>
         </motion.div>
@@ -86,16 +86,16 @@ const FAQ: React.FC = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
-              className="bg-white border border-gray-200 rounded-2xl overflow-hidden hover:border-brand-accent/30 transition-colors shadow-sm"
+              className="bg-[#0a0a0a] border border-brand-accent/20 rounded-2xl overflow-hidden hover:border-brand-accent/50 transition-colors shadow-sm"
             >
               <button 
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-6 py-5 md:px-8 md:py-6 flex items-center justify-between text-left focus:outline-none group cursor-pointer"
               >
-                <h3 className="font-heading font-bold text-brand-dark text-base md:text-lg group-hover:text-brand-accent transition-colors pr-4">
+                <h3 className="font-heading font-bold text-white text-base md:text-lg group-hover:text-brand-accent transition-colors pr-4">
                   {faq.question}
                 </h3>
-                <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${openIndex === index ? 'bg-brand-accent text-white rotate-180' : 'bg-brand-gray text-brand-dark group-hover:bg-brand-accent/10 group-hover:text-brand-accent'}`}>
+                <div className={`w-8 h-8 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 ${openIndex === index ? 'bg-brand-accent text-white rotate-180' : 'bg-white/5 text-white group-hover:bg-brand-accent/10 group-hover:text-brand-accent'}`}>
                   <ChevronDown className="w-5 h-5" />
                 </div>
               </button>
@@ -108,7 +108,7 @@ const FAQ: React.FC = () => {
                     exit={{ height: 0, opacity: 0 }}
                     transition={{ duration: 0.3, ease: 'easeInOut' }}
                   >
-                    <div className="px-6 pb-5 md:px-8 md:pb-6 text-gray-700 text-sm md:text-base border-t border-gray-50 pt-4">
+                    <div className="px-6 pb-5 md:px-8 md:pb-6 text-gray-400 text-sm md:text-base border-t border-white/5 pt-4">
                       {faq.answer}
                     </div>
                   </motion.div>
