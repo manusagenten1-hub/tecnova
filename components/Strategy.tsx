@@ -28,11 +28,6 @@ const strategies: StrategyItem[] = [
     icon: MousePointerClick,
     title: 'Otimização de Conversão (CRO)',
     description: 'Análise de métricas e ajustes contínuos para garantir que cada centavo do seu investimento traga retorno.'
-  },
-  {
-    icon: Plug,
-    title: 'Estruturação de Vendas',
-    description: 'Integramos ferramentas para que seu time receba leads organizados e prontos para fechamento via WhatsApp.'
   }
 ];
 
@@ -56,7 +51,7 @@ const Strategy: React.FC = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+        <div className="flex flex-wrap justify-center gap-6 md:gap-8">
           {strategies.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -66,11 +61,10 @@ const Strategy: React.FC = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.1, ease: 'easeOut' }}
-                className="bg-brand-dark/50 border border-brand-accent/10 p-6 md:p-8 rounded-2xl hover:border-brand-accent/50 hover:bg-brand-accent/5 hover:shadow-[0_0_20px_rgba(0,212,255,0.1)] transition-all duration-500 group relative overflow-hidden"
+                className="bg-brand-dark/50 border border-brand-accent/10 p-6 md:p-8 rounded-2xl transition-all duration-500 relative overflow-hidden w-full md:w-[calc(50%-1.5rem)] lg:w-[calc(33.333%-1.5rem)]"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-brand-accent/10 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                <div className="w-10 h-10 md:w-12 md:h-12 bg-brand-accent/10 rounded-lg flex items-center justify-center mb-4 md:mb-6 transition-all duration-300 relative z-10">
-                  <Icon className="w-5 h-5 md:w-6 md:h-6 text-brand-accent" />
+                <div className="mb-4 md:mb-6 relative z-10">
+                  <Icon className="w-8 h-8 md:w-10 md:h-10 text-brand-accent transition-colors duration-500" />
                 </div>
                 <h3 className="text-lg md:text-xl font-heading font-bold mb-2 md:mb-3 transition-colors duration-300 relative z-10">{item.title}</h3>
                 <p className="text-sm md:text-base text-gray-400 leading-relaxed transition-colors duration-300 relative z-10">
