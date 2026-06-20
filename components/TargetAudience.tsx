@@ -16,7 +16,7 @@ const audiences: AudienceItem[] = [
 
 const TargetAudience: React.FC = () => {
   return (
-    <section id="audience" className="py-16 md:py-24 bg-white relative overflow-hidden">
+    <section id="audience" className="py-16 md:py-24 bg-brand-dark relative overflow-hidden border-t border-brand-accent/5">
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <motion.div 
           initial={{ opacity: 0, y: 40 }}
@@ -25,14 +25,14 @@ const TargetAudience: React.FC = () => {
           transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="text-center max-w-4xl mx-auto mb-10 md:mb-16"
         >
-          <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-brand-dark mb-6 md:mb-8">
+          <h2 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold text-white mb-6 md:mb-8">
             Ideal para negócios que querem crescer no digital
           </h2>
-          <p className="text-gray-900 font-bold text-lg md:text-2xl leading-relaxed mb-8 md:mb-10">
+          <p className="text-gray-300 font-bold text-lg md:text-2xl leading-relaxed mb-8 md:mb-10">
             Trabalhamos com empresas que entendem a importância de uma presença digital forte para gerar oportunidades, fortalecer sua marca e escalar resultados.
           </p>
-          <div className="inline-block px-4 py-1.5 rounded-full bg-gray-100 border border-gray-300 shadow-sm">
-            <span className="text-gray-800 text-xs md:text-sm font-bold tracking-widest uppercase">
+          <div className="inline-block px-4 py-1.5 rounded-full bg-brand-accent/10 border border-brand-accent/20 shadow-sm">
+            <span className="text-brand-accent text-xs md:text-sm font-bold tracking-widest uppercase">
               Alguns exemplos de segmentos atendidos:
             </span>
           </div>
